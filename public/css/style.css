@@ -60,7 +60,7 @@ body {
     font-size: 18px;
     line-height: 22px;
     color: #D70900;
-    transition: 300ms ease-out;
+    transition: 150ms ease;
     cursor: pointer;
 }
 
