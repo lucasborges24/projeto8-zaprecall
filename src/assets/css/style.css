@@ -73,6 +73,7 @@ body {
 .initial-button button:hover {
     background-color: #D70900;
     color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 

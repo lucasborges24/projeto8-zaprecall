@@ -8,8 +8,6 @@ import InitialQuestion from "./PageQuestion/InitialQuestion"
 
 
 export default function PageQuestion() {
-    const cards = Cards();
-
     return (
         <div className="main-page">
             <div className="main-title">
@@ -20,7 +18,7 @@ export default function PageQuestion() {
             <Footer>
                 <div className="main-footer">
                     <p>
-                        0/{cards.length} CONCLUÍDOS
+                        0/{Cards().length} CONCLUÍDOS
                     </p>
                 </div>
             </Footer>
