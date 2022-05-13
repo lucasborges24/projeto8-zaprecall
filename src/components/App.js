@@ -9,7 +9,7 @@ export default function App() {
 
     return (
         <>
-            {page ? <InitialPage page={page} setPage={setPage} /> : <PageQuestion />}
+            {page ? <InitialPage setPage={setPage} /> : <PageQuestion />}
         </>
     )
 }
