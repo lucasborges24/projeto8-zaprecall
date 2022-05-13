@@ -1,8 +1,10 @@
+import zaprecall from "../assets/img/zaprecall.svg"
+
 export default function PageQuestion () {
     return ( 
         <div className="main-page">
             <div className="main-title">
-                <img src="img/zaprecall.svg" alt="logo" />
+                <img src={zaprecall} alt="logo" />
                 <h1>ZapRecall</h1>
             </div>
             <div className="main-questions">
