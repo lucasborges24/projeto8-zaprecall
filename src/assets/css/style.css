@@ -137,7 +137,15 @@ body {
     background: #FFFFFF;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
+    transition: 100ms;
+}
 
+.question:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.question:active {
+    transform: translateY(4px);
 }
 
 .question .finished-red {
@@ -253,6 +261,14 @@ footer[oi="teste"] {
     position: relative;
 }
 
+.question2:active {
+    transform: translateY(4px);
+}
+
+.question2 img {
+    cursor: pointer;
+}
+
 .question2:last-child {
     margin-bottom: 80px;
 }
@@ -289,7 +305,27 @@ footer[oi="teste"] {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: 100ms;
 }
+
+.little-box:active {
+    transform: translateY(4px);
+}
+
+.little-box:hover {
+    filter:  drop-shadow(4px 4px 10px #FF3030)
+}
+
+.yellow:hover {
+    filter:  drop-shadow(4px 4px 10px #FF922E)
+}
+
+.green:hover {
+    filter:  drop-shadow(4px 4px 5px #2FBE34)
+}
+
+
 
 .little-box p {
     font-weight: 400;
