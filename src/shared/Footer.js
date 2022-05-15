@@ -10,7 +10,9 @@ export default function Footer({
     cardzin,
     setCardzin,
     currentIndex,
-    setCurrentIndex
+    setCurrentIndex,
+    texto,
+    texto2
 }) {
     if (contador === 0) {
         return (
@@ -18,10 +20,30 @@ export default function Footer({
         )
     } else if (contador < Cards().length) {
         return (
-            <FooterAfter contador={contador} cardzin={cardzin} setCardzin={setCardzin} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex}/>
+            <footer>
+                <FooterAfter contador={contador} cardzin={cardzin} setCardzin={setCardzin} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
+            </footer>
         )
     } else if (contador === Cards().length) {
-        <FinalFooter contador={contador} cardzin={cardzin} setCardzin={setCardzin} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex}/>
+        let aux = 0;
+        for (let i = 0; i < cardzin.length; i++) {
+            console.log(cardzin[i].styleColor)
+            if (cardzin[i].styleColor !== "finished-green") {
+                texto = "😢 Putz..."
+                texto2 = "Ainda falta alguns... Mas não desanime"
+                break;
+            }
+            if (i === cardzin.length - 1) {
+                texto = "🥳 Parabéns!"
+                texto2 = "Você não esqueceu de nenhum flashcard!"
+            }
+        }
+
+        return (
+            <footer oi="teste">
+                <FinalFooter contador={contador} cardzin={cardzin} setCardzin={setCardzin} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} texto={texto} texto2={texto2}/>
+            </footer>
+        )
     }
 }
 
@@ -58,31 +80,38 @@ function FooterAfter({
     if (aux !== "tem igual") {
         arrayBolado.push(currentIndex)
     }
-    
+
     return (
-        <footer>
-            <div className="main-footer">
-                <p>
-                    {contador}/{Cards().length} CONCLUÍDOS
-                </p>
-                {arrayBolado.map((oi, index) => {
+        <div className="main-footer">
+            <p>
+                {contador}/{Cards().length} CONCLUÍDOS
+            </p>
+            {arrayBolado.map((oi, index) => {
                 console.log(cardzin[oi].result)
-                return <img src={cardzin[oi].result} alt="opa meu chegas" key={index}/>})}
-            </div>
-        </footer>
+                return <img src={cardzin[oi].result} alt="opa meu chegas" key={index} />
+            })}
+        </div>
     )
 }
 
-function FinalFooter ({
+function FinalFooter({
     contador,
     cardzin,
     setCardzin,
     currentIndex,
-    setCurrentIndex
+    setCurrentIndex,
+    texto,
+    texto2
 }) {
-    return (
-        
-    <FooterAfter contador={contador} cardzin={cardzin} setCardzin={setCardzin} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex}/>
 
+
+    return (
+        <>
+            <div className="text-footer">
+            <h2>{texto}</h2>
+            <p>{texto2}</p>
+            </div>
+            <FooterAfter contador={contador} cardzin={cardzin} setCardzin={setCardzin} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
+        </>
     )
 }
