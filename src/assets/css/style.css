@@ -137,6 +137,22 @@ body {
     background: #FFFFFF;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
+    
+}
+
+.question .finished-red {
+    color: #FF3030;
+    text-decoration: line-through #FF3030 2px;
+}
+
+.question .finished-yellow {
+    color: #FF922E;
+    text-decoration: line-through #FF922E 2px;
+}
+
+.question .finished-green {
+    color: #2FBE34;
+    text-decoration: line-through #2FBE34 2px;
 }
 
 .question:last-child {
