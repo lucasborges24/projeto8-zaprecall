@@ -1,6 +1,5 @@
 import Cards from "../../shared/Cards"
 import icon from "../../assets/img/circle.png"
-import Icon from "../../shared/Icon";
 import error from "../../assets/img/error.svg"
 import interrogacao from "../../assets/img/interrogação.svg"
 import check from "../../assets/img/check.svg"
@@ -13,7 +12,6 @@ const cardsRandom = Cards().sort(comparador)
 export default function InitialQuestion({ setClicked, clicked, setClicked2, clicked2, setCount, count, styleColor, cardzin, setCardzin, currentIndex, setCurrentIndex }) {
 
     
-    console.log(cardsRandom[0].question)
     return (
         <div className="main-questions">
             {cardsRandom.map((a, index) => {
@@ -31,7 +29,6 @@ export default function InitialQuestion({ setClicked, clicked, setClicked2, clic
 function Pergunta({ index, setClicked, clicked, styleColor, cardzin, setCardzin }) {
 
     if (cardzin[index].state === "finished") {
-        console.log("estilo css é:" + cardzin[index].styleColor)
         return (
             <div className="question" key={index}>
                 <p className={cardzin[index].styleColor} >Pergunta {index + 1}</p>

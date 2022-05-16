@@ -1,8 +1,4 @@
 import Cards from "./Cards";
-import Icon from "./Icon";
-import error from "../assets/img/error.svg"
-import interrogacao from "../assets/img/interrogação.svg"
-import check from "../assets/img/check.svg"
 const arrayBolado = [];
 
 export default function Footer({
@@ -25,9 +21,7 @@ export default function Footer({
             </footer>
         )
     } else if (contador === Cards().length) {
-        let aux = 0;
         for (let i = 0; i < cardzin.length; i++) {
-            console.log(cardzin[i].styleColor)
             if (cardzin[i].styleColor !== "finished-green") {
                 texto = "😢 Putz..."
                 texto2 = "Ainda falta alguns... Mas não desanime"
@@ -87,7 +81,6 @@ function FooterAfter({
                 {contador}/{Cards().length} CONCLUÍDOS
             </p>
             {arrayBolado.map((oi, index) => {
-                console.log(cardzin[oi].result)
                 return <img src={cardzin[oi].result} alt="opa meu chegas" key={index} />
             })}
         </div>

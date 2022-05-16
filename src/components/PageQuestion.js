@@ -3,7 +3,6 @@ import zaprecall from "../assets/img/zaprecall.svg"
 import Cards from "../shared/Cards"
 import Footer from "../shared/Footer"
 import InitialQuestion from "./PageQuestion/InitialQuestion"
-import Icon from "../shared/Icon"
 import React from 'react'
 
 
@@ -18,7 +17,6 @@ export default function PageQuestion() {
     const [currentIndex, setCurrentIndex] = React.useState(0)
 
 
-    console.log("passou pela PageQuestion")
     return (
         <div className="main-page">
             <div className="main-title">

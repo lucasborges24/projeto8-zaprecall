@@ -1,9 +1,3 @@
-import error from "../assets/img/error.svg"
-import interrogacao from "../assets/img/interrogação.svg"
-import check from "../assets/img/check.svg"
-import React from 'react'
-
-
 export default function Cards () {
         const cards = [
             {
